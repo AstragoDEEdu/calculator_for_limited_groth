@@ -1,6 +1,5 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:rechner_begrenztes_wachstum/main.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -14,7 +13,6 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(appInfo.title),
-        centerTitle: true,
         automaticallyImplyLeading: false,
         actions: [
           IconButton(
@@ -32,7 +30,7 @@ class HomeScreen extends StatelessWidget {
             icon: Icon(Icons.code_outlined),
             tooltip: "Source Code auf Github ansehen",
             onPressed: () async {
-              String _url = "https://github.com/AstragoYT/Calculator-for-limited-groth";
+              String _url = "https://github.com/AstragoEdu/calculator_for_limited_groth";
               if (await canLaunch(_url)) {
                 launch(_url);
               } else {
